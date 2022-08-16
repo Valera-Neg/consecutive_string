@@ -38,7 +38,7 @@ function longestConsec(strarr, k) {
   let currArr = []
   for(let i = 0; strarr.length >= k;) {
     currArr.push(strarr.slice(i, k))
-    // node < 11 use  currArr = [].concat.apply([], currArr);  
+    // node < 11 use  currArr = [].concat.apply([], currArr) instead flat();  
     current = currArr.flat(2).join(''); 
     if ( current.length > res.length) {
       res = current;
